@@ -1,0 +1,4 @@
+name = Portland Core
+description = Custom configuration related to the Portland distribution.
+core = 7.x
+package = Portland

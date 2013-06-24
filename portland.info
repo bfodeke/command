@@ -1,0 +1,95 @@
+name = Portland
+distribution_name = Portland
+description = Drupal distribution for common features used across website applications and websites. The Portland distro uses Guardr as a base profile.
+core = 7.x
+
+base = guardr
+
+; Core
+; ----
+dependencies[] = block
+dependencies[] = comment
+dependencies[] = contextual
+dependencies[] = dashboard
+dependencies[] = dblog
+dependencies[] = field
+dependencies[] = field_sql_storage
+dependencies[] = field_ui
+dependencies[] = file
+dependencies[] = filter
+dependencies[] = help
+dependencies[] = image
+dependencies[] = list
+dependencies[] = menu
+dependencies[] = node
+dependencies[] = number
+dependencies[] = options
+dependencies[] = path
+dependencies[] = rdf
+dependencies[] = search
+dependencies[] = shortcut
+dependencies[] = system
+dependencies[] = taxonomy
+dependencies[] = text
+dependencies[] = toolbar
+dependencies[] = update
+dependencies[] = user
+
+
+; Contrib
+; -------
+dependencies[] = advanced_help
+dependencies[] = cck
+dependencies[] = ctools
+dependencies[] = deploy_info
+dependencies[] = diskfree
+dependencies[] = environment_indicator
+dependencies[] = features
+dependencies[] = module_filter
+dependencies[] = pathauto
+dependencies[] = token
+dependencies[] = views
+dependencies[] = views_ui
+
+
+; Custom
+; ------
+dependencies[] = portland_core
+
+
+; Themes
+; ------
+theme = boron
+
+
+; Settings
+; --------
+variables[site_name] = Portland distribution
+variables[site_mail] = admin@example.com
+variables[site_default_country] = US
+variables[date_default_timezone] = America/New_York
+variables[date_format_long] = l, F j, Y - g:ia
+variables[date_format_medium] = D, m/d/Y - g:ia
+variables[date_format_short] = m/d/Y - g:ia
+variables[date_format_short_date_and_time] = M. d h:iA
+variables[date_format_short_date_only] = M. d
+variables[date_format_time_only] = h:iA
+variables[date_first_day] = 0
+variables[configurable_timezones] = 0
+variables[admin_theme] = seven
+variables[environment_indicator_text] = LOCALDEV  LOCALDEV  LOCALDEV  LOCALDEV  LOCALDEV
+variables[site_frontpage] = node/1
+variables[diskfree_alert_email] = admin@example.com
+
+
+; Content
+; -------
+nodes[front][type] = page
+nodes[front][title] = Welcome to your new Portland distribution site!
+nodes[front][uid] = 1
+nodes[front][language] = und
+nodes[front][body][und][0][value] = <p>The Portland distribution is a Drupal distribution which provides common features used across website applications. It uses the <a href="http://drupal.org/project/guardr">Guardr distribution</a> as a base distribution to provide security requirements and enhancements.</p><p><a href="/user">Login/Log out</a></p>
+nodes[front][body][und][0][format] = full_html
+
+
+files[] = protland.profile

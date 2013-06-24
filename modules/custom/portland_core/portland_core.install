@@ -1,0 +1,31 @@
+<?php
+
+/**
+ * @file
+ * Install, update and uninstall functions for the deploy_info module.
+ */
+
+/**
+ * Implements hook_requirements().
+ *
+ * Display the contents of VERSION.txt on the status report page.
+ */
+function portland_core_requirements($phase) {
+  $requirements = array();
+  if ($phase === 'runtime' && file_exists('profiles/portland/VERSION.txt')) {
+    $version = trim(file_get_contents('profiles/portland/VERSION.txt'));
+    $requirements['portland'] = array(
+      'title' => 'Distribution version (Portland)',
+      'value' => check_plain($version),
+      'severity' => REQUIREMENT_OK,
+    );
+  }
+  return $requirements;
+}
+
+/**
+ * Enable the deploy_info module.
+ */
+function portland_core_update_7001() {
+  module_enable(array('deploy_info'), FALSE);
+}

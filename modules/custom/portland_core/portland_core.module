@@ -1,0 +1,32 @@
+<?php
+/**
+ * @file
+ * Portland distro's core module for updates and code library.
+ */
+
+/**
+ * Helper module for downloading files.
+ */
+function portland_core_file_download($uri) {
+  if (file_exists($uri)) {
+    // Get filename from the uri.
+    $filename = drupal_basename($uri);
+
+    // Get mime type.
+    $mime_type = file_get_mimetype($uri);
+
+    // Build headers.
+    $headers = array(
+      'Pragma' => 'public',
+      'Expires' => '0',
+      'Cache-Control' => 'must-revalidate, post-check=0, pre-check=0',
+      'Content-Type' => $mime_type,
+      'Content-Disposition' => 'attachment; filename=' . $filename,
+      'Content-Transfer-Encoding' => 'binary',
+      'Content-Length' => filesize($uri),
+    );
+
+    // Start file download.
+    file_transfer($uri, $headers);
+  }
+}
