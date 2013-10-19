@@ -17,7 +17,7 @@ projects[drupal][patch][] = http://drupal.org/files/guardr-remove-changelog-txt-
 ; ----------------
 projects[portland][type] = profile
 projects[portland][download][type] = git
-projects[portland][download][url] =
+projects[portland][download][url] = git@github.com:CharDUG/portland.git
 projects[portland][download][branch] = 7.x-1.x
 
 projects[guardr][type] = profile
