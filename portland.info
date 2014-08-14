@@ -52,18 +52,18 @@ dependencies[] = views_ui
 
 ; Custom
 ; ------
-dependencies[] = portland_core
+dependencies[] = command_core
 
 
 ; Themes
 ; ------
-theme = boron
+theme = bootstrap
 
 
 ; Settings
 ; --------
-variables[site_name] = Portland distribution
-variables[site_mail] = admin@example.com
+variables[site_name] = Command distribution
+variables[site_mail] = support@commandpartners.com
 variables[site_default_country] = US
 variables[date_default_timezone] = America/New_York
 variables[date_format_long] = l, F j, Y - g:ia
@@ -77,17 +77,17 @@ variables[configurable_timezones] = 0
 variables[admin_theme] = seven
 variables[environment_indicator_text] = LOCALDEV  LOCALDEV  LOCALDEV  LOCALDEV  LOCALDEV
 variables[site_frontpage] = node/1
-variables[diskfree_alert_email] = admin@example.com
+variables[diskfree_alert_email] = tech@commandpartners.com
 
 
 ; Content
 ; -------
 nodes[front][type] = page
-nodes[front][title] = Welcome to your new Portland distribution site!
+nodes[front][title] = Welcome to your new Command distribution site!
 nodes[front][uid] = 1
 nodes[front][language] = und
-nodes[front][body][und][0][value] = <p>The Portland distribution is a Drupal distribution which provides common features used across website applications. It uses the <a href="http://drupal.org/project/guardr">Guardr distribution</a> as a base distribution to provide security requirements and enhancements.</p><p><a href="/user">Login/Log out</a></p>
+nodes[front][body][und][0][value] = <p>The Command distribution is a Drupal distribution which provides common features used across website applications.
 nodes[front][body][und][0][format] = full_html
 
 
-files[] = protland.profile
+files[] = command.profile
