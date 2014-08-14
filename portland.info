@@ -1,6 +1,6 @@
-name = Portland
-distribution_name = Portland
-description = Drupal distribution for common features used across website applications and websites. The Portland distro uses Guardr as a base profile.
+name = Command
+distribution_name = Command
+description = Drupal distribution for common features used across website applications and websites.
 core = 7.x
 
 ; Core
